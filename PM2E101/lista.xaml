@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E101.lista">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Atras"
+                     Clicked="ToolbarItem_Clicked" />
+
+       
+    </ContentPage.ToolbarItems>
+
+
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView   x:Name="ListaEmpleados"  ItemTapped="ListaEmpleados_ItemTapped" HeightRequest="200">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <StackLayout  Orientation="Vertical" >
+                                <StackLayout Orientation="Horizontal" >
+                                    <Image Source="{Binding imgRuta}" WidthRequest="50" HeightRequest="50" />
+                                    <Label Text="{Binding descripcion}"  />
+                                    <Label Text="{Binding latitud}"  />
+                                    <Label Text="{Binding longitud}"  />
+                                   
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
